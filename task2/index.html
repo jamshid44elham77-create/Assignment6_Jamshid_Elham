@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task 2 — The Party in Motion</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="page-header">
+        <p class="eyebrow"> Task 2</p>
+        <h1>The Party in Motion</h1>
+        <p>
+            Use the detective cases, inspect guests, move them between rooms,
+            and sort each room by arrival time.
+        </p>
+    </header>
+
+    <main class="page-layout">
+        <section class="party-panel">
+            <div class="party-heading">
+                <div>
+                    <h2>The Party House</h2>
+                    <p>Cake disappeared at 21:30</p>
+                </div>
+
+                <div class="task-actions">
+                    <button
+                        id="clear-spotlight"
+                        class="clear-button"
+                        type="button"
+                    >
+                        Clear
+                    </button>
+
+                    <button
+                        id="reset-party"
+                        class="reset-button"
+                        type="button"
+                    >
+                        Reset party
+                    </button>
+                </div>
+            </div>
+
+            <div class="house-shell">
+                <div class="chimney" aria-hidden="true"></div>
+                <div class="roof" aria-hidden="true"></div>
+
+                <div class="party-sign">
+                    🎂 The Party: 19:30–22:30
+                </div>
+
+                <div id="house" aria-label="Party house"></div>
+
+                <div class="house-base">
+                    <span>Selector Detective Headquarters</span>
+                </div>
+            </div>
+
+            <div class="legend">
+                <h3>Legend</h3>
+
+                <div class="legend-items">
+                    <span>📱 Phone</span>
+                    <span>👓 Glasses</span>
+                    <span>👜 Bag</span>
+                    <span>🥤 Cup</span>
+                    <span>🍰 Cake crumbs</span>
+                    <span class="atu-example">ATU</span>
+                    <span>ATU student</span>
+                </div>
+            </div>
+        </section>
+
+        <aside class="detective-panel">
+            <h2>Detective Cases</h2>
+
+            <p class="task-help">
+                Select a case to activate the spotlight. Click a guest to
+                inspect or move them.
+            </p>
+
+            <div id="case-buttons" class="case-buttons"></div>
+
+            <section class="result-panel" aria-live="polite">
+                <p class="result-label">Investigation result</p>
+
+                <h3 id="result-title">Choose a case</h3>
+
+                <p id="result-text">
+                    Matching guests will remain bright.
+                </p>
+
+                <div class="selector-box">
+                    <span>jQuery chain used:</span>
+                    <code id="selector-used">—</code>
+                </div>
+            </section>
+        </aside>
+    </main>
+
+    <footer class="page-footer">
+        Task 2 — Effects and animations
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/task2.js"></script>
+</body>
+</html>
